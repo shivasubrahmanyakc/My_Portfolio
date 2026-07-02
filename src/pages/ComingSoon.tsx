@@ -99,7 +99,7 @@ const ComingSoon = () => {
           </div>
 
           <div className="cs-terminal-prompt">
-            <span className="cs-terminal-prompt-symbol">sys@shivasubrahmanya:~#</span>
+            <span className="cs-terminal-prompt-symbol">sys@shivasubrahmanyakc:~#</span>
             <span className="cs-terminal-value">
               {percent < 86 ? "downloading_dependencies..." : "awaiting_core_deployment_v2.0"}
             </span>

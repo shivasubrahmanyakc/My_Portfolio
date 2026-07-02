@@ -3,7 +3,7 @@ import { useTheme } from './ThemeProvider';
 import './BackgroundEffect.css';
 
 const GITHUB = {
-    username: 'shivasubrahmanya',
+    username: 'shivasubrahmanyakc',
     repo: 'My_Portfolio',
     path: 'src/components/Hero.tsx'
 };

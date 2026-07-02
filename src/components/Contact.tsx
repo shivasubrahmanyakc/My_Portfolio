@@ -64,11 +64,11 @@ const Contact = () => {
             </p>
 
             <div className="contact-links">
-              <a href="https://github.com/shivasubrahmanya" target="_blank" rel="noopener noreferrer" className="contact-link">
+              <a href="https://github.com/shivasubrahmanyakc" target="_blank" rel="noopener noreferrer" className="contact-link">
                 <Github size={16} />
                 <span className="contact-link-text">/github</span>
               </a>
-              <a href="https://www.linkedin.com/in/shivasubrahmanya" target="_blank" rel="noopener noreferrer" className="contact-link">
+              <a href="https://www.linkedin.com/in/shivasubrahmanyakc" target="_blank" rel="noopener noreferrer" className="contact-link">
                 <Linkedin size={16} />
                 <span className="contact-link-text">/linkedin</span>
               </a>

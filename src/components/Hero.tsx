@@ -65,10 +65,10 @@ const Hero = () => {
           </div>
 
           <div className="social-links">
-            <a href="https://github.com/shivasubrahmanya" target="_blank" rel="noopener noreferrer" className="social-icon">
+            <a href="https://github.com/shivasubrahmanyakc" target="_blank" rel="noopener noreferrer" className="social-icon">
               <Github size={30} strokeWidth={1.5} />
             </a>
-            <a href="https://www.linkedin.com/in/shivasubrahmanya" target="_blank" rel="noopener noreferrer" className="social-icon">
+            <a href="https://www.linkedin.com/in/shivasubrahmanyakc" target="_blank" rel="noopener noreferrer" className="social-icon">
               <Linkedin size={30} strokeWidth={1.5} />
             </a>
             <a href="mailto:shivasubrahmanyakc@gmail.com" className="social-icon">
