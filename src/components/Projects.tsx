@@ -248,7 +248,7 @@ const Projects = () => {
       icon: <Brain size={20} />,
       technologies: ["TensorFlow 2", "MNE-Python", "FastAPI", "React", "react-force-graph-2d", "GCN", "Signal Processing"],
       demoUrl: "#",
-      codeUrl: "https://github.com/shivasubrahmanyakc/NeuralScan-AI-EEG-based-Brain-Disorder-Classification",
+      codeUrl: "https://github.com/shivasubrahmanyakc/NeuralScan-AI-EEG-based-Brain-Disorder-Classification.",
       features: [
         "Hybrid CNN-BiLSTM temporal classifier with Spatial Attention",
         "Functional connectivity networks built via 19x19 coherence adjacency matrices",
@@ -273,7 +273,7 @@ const Projects = () => {
     "Tailwind CSS"
   ],
   demoUrl: "#",
-  codeUrl: "https://github.com/shivasubrahmanyakc/Self-Healing-RAG",
+  codeUrl: "https://github.com/shivasubrahmanyakc/AESCULAPIUS",
   features: [
     "8-agent AI workflow for query analysis, retrieval, reranking, context evaluation, self-healing, generation, hallucination verification, and confidence scoring",
     "Autonomous self-healing pipeline with up to three intelligent query rewrites when retrieval quality falls below threshold",
