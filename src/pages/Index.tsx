@@ -4,6 +4,8 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Education from "@/components/Education";
 import Research from "@/components/Research";
+import Achievements from "@/components/Achievements";
+import Certificates from "@/components/Certificates";
 import Contact from "@/components/Contact";
 
 const Index = () => {
@@ -18,6 +20,8 @@ const Index = () => {
         <Research />
         <Projects />
         <Education />
+        <Achievements />
+        <Certificates />
         <Contact />
       </main>
     </div>
