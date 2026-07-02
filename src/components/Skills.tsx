@@ -10,7 +10,7 @@ const Skills = () => {
     {
       id: "SYS_02",
       title: "Frameworks & Libraries",
-      skills: ["PyTorch", "TensorFlow", "NumPy", "Pandas", "Matplotlib", "React", "Node.js", "Express.js"]
+      skills: ["PyTorch", "TensorFlow", "NumPy", "Pandas", "Matplotlib", "React", "Node.js", "Express.js", "LangChain", "LangGraph"]
     },
     {
       id: "SYS_03",
@@ -38,11 +38,12 @@ const Skills = () => {
         "Git",
         "GitHub",
         "Jupyter",
+        "Docker",
         "Vercel",
         "MongoDB Atlas",
         "Postman",
         "n8n",
-        "Microsoft Power BI",
+        "Power BI",
         "Figma",
         "Miro",
         "Canva"
@@ -57,7 +58,8 @@ const Skills = () => {
         "Collaboration",
         "Leadership",
         "Teaching & Mentoring",
-        "140+ LeetCode Solved",
+        "300+ LeetCode Solved",
+        "IEEE Chair – CIS Student Branch",
         "Open Source Contributor"
       ]
     }

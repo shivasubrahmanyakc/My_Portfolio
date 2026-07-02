@@ -9,13 +9,13 @@ const Education = () => {
       location: "Adyar, Mangaluru",
       period: "2023 - 2027",
       status: "IN_PROGRESS",
-      gpa: "9.6 / 10.0",
+      gpa: "9.48 / 10.0",
       description: "Specializing in Artificial Intelligence and Machine Learning. Focus: Practical applications & real-world problem solving."
     },
     {
       id: "EDU_02",
       degree: "Pre University Course (PCMB)",
-      institution: "Vivekananda Pre University Centre",
+      institution: "Vivekananda Pre University College",
       location: "Puttur",
       period: "2021 - 2023",
       status: "COMPLETED",

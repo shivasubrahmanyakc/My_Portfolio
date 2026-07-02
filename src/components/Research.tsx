@@ -1,4 +1,4 @@
-import { Activity, ExternalLink } from "lucide-react";
+import { Activity, ExternalLink, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import "./Research.css";
 
@@ -6,16 +6,30 @@ const Research = () => {
     const researchItems = [
         {
             id: "01",
-            title: "Multimodal Knowledge Fusion for Arecanut Quality Assessment",
-            status: "Manuscript In Preparation",
-            description: "Developing a multimodal CNN for arecanut quality assessment integrating RGB and X-ray imagery through structured fusion strategies, achieving 99.70% accuracy under controlled conditions.",
+            title: "Multimodal Feature Level Fusion for Arecanut Quality Assessment",
+            status: "Submitted — Elsevier Array / SSRN Preprint",
+            description: "Developed a multimodal RGB–X-ray deep learning pipeline for arecanut quality classification, achieving 99.80% accuracy using CNN-based architectures with PyTorch and TensorFlow/Keras. Evaluated using cross-validation and standard classification metrics.",
             icon: <Activity size={20} />,
             technologies: ["Python", "PyTorch", "TensorFlow", "CNN", "Machine Learning", "Computer Vision"],
-            linkUrl: "/Shivasubrahmanya_K_C_Resume.pdf",
+            linkUrl: "http://ssrn.com/abstract=6992593",
             features: [
-                "Integrating RGB and X-ray imagery",
-                "Structured feature fusion strategies",
-                "Standardized preprocessing and evaluation"
+                "Multimodal RGB and X-ray imagery fusion",
+                "99.80% classification accuracy",
+                "Cross-validation & standard classification metrics"
+            ]
+        },
+        {
+            id: "02",
+            title: "Empowering Wildlife Conservation Through Real-Time Anti-Poaching System",
+            status: "Published — IEEE DISCOVER 2025",
+            description: "Co-authored a real-time IoT and AI based anti-poaching system using YOLOv8n for intrusion detection in wildlife reserves, with SMS-based alerting and explainable AI for forest official use.",
+            icon: <Shield size={20} />,
+            technologies: ["YOLOv8n", "IoT", "Python", "Explainable AI", "SMS Alerting", "Computer Vision"],
+            linkUrl: "https://ieeexplore.ieee.org/document/11258983",
+            features: [
+                "Real-time intrusion detection via YOLOv8n",
+                "SMS-based instant alert system for forest officials",
+                "Explainable AI for transparent decision-making"
             ]
         }
     ];

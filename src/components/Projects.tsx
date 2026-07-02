@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Clock, Users, Utensils, Mail, Bell, Brain, HeartPulse, Bot, Activity, Network } from "lucide-react";
+import { ExternalLink, Github, Clock, Users, Utensils, Mail, Bell, Brain, HeartPulse, Bot, Activity, Network, FlaskConical } from "lucide-react";
 import { Link } from "react-router-dom";
 import "./Projects.css";
 
@@ -244,13 +244,13 @@ const Projects = () => {
     {
       id: "13",
       title: "NeuralScan AI — EEG-based Brain Disorder Classification",
-      description: "An end-to-end neuro-diagnostic ML pipeline and full-stack interactive dashboard for analyzing 19-Channel electroencephalography (EEG) data. Classifies Alzheimer’s Disease, Frontotemporal Dementia, and Cognitively Normal profiles using CNN-BiLSTM and Graph Convolutional Networks (GCN).",
+      description: "An end-to-end neuro-diagnostic ML pipeline and full-stack interactive dashboard for analyzing 19-Channel electroencephalography (EEG) data. Classifies Alzheimer's Disease, Frontotemporal Dementia, and Cognitively Normal profiles using CNN-BiLSTM and Graph Convolutional Networks (GCN).",
       icon: <Brain size={20} />,
       technologies: ["TensorFlow 2", "MNE-Python", "FastAPI", "React", "react-force-graph-2d", "GCN", "Signal Processing"],
       demoUrl: "#",
       codeUrl: "https://github.com/shivasubrahmanyakc/NeuralScan-AI-EEG-based-Brain-Disorder-Classification.",
       features: [
-        "Hybrid CNN-BiLSTM temporal classifier with Spatial Attention",
+        "Hybrid CNN-BiLSTM temporal classifier with Spatial Attention — 96.74% accuracy",
         "Functional connectivity networks built via 19x19 coherence adjacency matrices",
         "Interactive 3-layer Graph Convolutional Network (GCN)",
         "Dynamic brain topomaps rendered live on a modern dashboard"
@@ -280,7 +280,22 @@ const Projects = () => {
     "Cross-encoder reranking using BAAI bge-reranker-large with Pinecone vector search for highly relevant document retrieval",
     "Grounded answer generation with hallucination verification, multi-factor confidence scoring, and real-time analytics dashboard"
   ]
-}
+},
+    {
+      id: "15",
+      title: "RxSignal — Drug Interaction Risk Intelligence Platform",
+      description: "An end-to-end drug safety intelligence platform that ingests 1.06 billion FDA adverse event records (FAERS 2025) with a chunked DuckDB pipeline, computing PRR/ROR pharmacovigilance signals across 43.8M drug-event triples. Combines XGBoost and a GraphSAGE GNN on a 13,160-node drug interaction graph.",
+      icon: <FlaskConical size={20} />,
+      technologies: ["XGBoost", "PyTorch", "GraphSAGE", "DuckDB", "FastAPI", "React", "FDA FAERS"],
+      demoUrl: "#",
+      codeUrl: "https://github.com/shivasubrahmanyakc/RxSignal-Drug-Interaction-Risk-Intelligence-Platform",
+      features: [
+        "Ingests 1.06B FDA FAERS 2025 records via chunked DuckDB pipeline; computes PRR/ROR signals on 43.8M drug-event triples",
+        "XGBoost classifier achieving 90.6% accuracy and 99.35% recall for adverse event risk prediction",
+        "GraphSAGE GNN trained on a 13,160-node drug graph for interaction-aware embeddings",
+        "~1ms prediction latency via FastAPI and pre-computed embeddings served to a React frontend"
+      ],
+    }
   ];
 
   return (
