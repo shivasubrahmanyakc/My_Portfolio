@@ -1,0 +1,22 @@
+{
+  "name": "Shivasubrahmanya K C | Portfolio",
+  "short_name": "SK Portfolio",
+  "description": "Official portfolio of Shivasubrahmanya K C — AI/ML Engineer specialising in Data Science, Machine Learning, and Full-Stack development.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

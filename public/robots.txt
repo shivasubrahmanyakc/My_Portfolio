@@ -1,14 +1,5 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
+# robots.txt — Shivasubrahmanya K C Portfolio
 User-agent: *
 Allow: /
+
+Sitemap: https://shivasubrahmanya.vercel.app/sitemap.xml

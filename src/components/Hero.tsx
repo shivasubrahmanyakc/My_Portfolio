@@ -12,8 +12,11 @@ const Hero = () => {
           <div className="profile-image-wrapper">
             <img
               src={profilePhoto}
-              alt="Shivasubrahmanya K C"
+              alt="Shivasubrahmanya K C — AI/ML Engineer"
               className="profile-image"
+              loading="lazy"
+              width="400"
+              height="400"
             />
             {/* Technical Markers */}
             <div className="corner-marker-tl" />
@@ -30,7 +33,7 @@ const Hero = () => {
               <span className="status-dot" />
               <span className="identity-text">Identity Verified</span>
             </div>
-            <h1 className="hero-title">
+            <h1 className="hero-title" aria-label="Shivasubrahmanya K C">
               SHIVASUBRAHMANYA
               <br />
               <span className="hero-subtitle">K C</span>
@@ -64,14 +67,14 @@ const Hero = () => {
             </a>
           </div>
 
-          <div className="social-links">
-            <a href="https://github.com/shivasubrahmanyakc" target="_blank" rel="noopener noreferrer" className="social-icon">
+          <div className="social-links" role="list" aria-label="Social media links">
+            <a href="https://github.com/shivasubrahmanyakc" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="GitHub profile of Shivasubrahmanya K C" role="listitem">
               <Github size={30} strokeWidth={1.5} />
             </a>
-            <a href="https://www.linkedin.com/in/shivasubrahmanyakc" target="_blank" rel="noopener noreferrer" className="social-icon">
+            <a href="https://www.linkedin.com/in/shivasubrahmanyakc" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn profile of Shivasubrahmanya K C" role="listitem">
               <Linkedin size={30} strokeWidth={1.5} />
             </a>
-            <a href="mailto:shivasubrahmanyakc@gmail.com" className="social-icon">
+            <a href="mailto:shivasubrahmanyakc@gmail.com" className="social-icon" aria-label="Email Shivasubrahmanya K C" role="listitem">
               <Mail size={30} strokeWidth={1.5} />
             </a>
           </div>
