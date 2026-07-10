@@ -119,7 +119,9 @@ const Achievements = () => {
                                             {item.urlLabel}
                                         </a>
                                     ) : (
-                                        <span className="achieve-no-link" />
+                                        <span className="achieve-no-link">
+                                            ★ Finalist
+                                        </span>
                                     )}
                                 </div>
                             </div>
