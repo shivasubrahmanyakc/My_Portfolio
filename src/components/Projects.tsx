@@ -287,7 +287,7 @@ const Projects = () => {
       description: "An end-to-end drug safety intelligence platform that ingests 1.06 billion FDA adverse event records (FAERS 2025) with a chunked DuckDB pipeline, computing PRR/ROR pharmacovigilance signals across 43.8M drug-event triples. Combines XGBoost and a GraphSAGE GNN on a 13,160-node drug interaction graph.",
       icon: <FlaskConical size={20} />,
       technologies: ["XGBoost", "PyTorch", "GraphSAGE", "DuckDB", "FastAPI", "React", "FDA FAERS"],
-      demoUrl: "#",
+      demoUrl: "http://3.85.44.18/",
       codeUrl: "https://github.com/shivasubrahmanyakc/RxSignal-Drug-Interaction-Risk-Intelligence-Platform",
       features: [
         "Ingests 1.06B FDA FAERS 2025 records via chunked DuckDB pipeline; computes PRR/ROR signals on 43.8M drug-event triples",
