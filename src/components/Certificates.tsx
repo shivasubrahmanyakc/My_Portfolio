@@ -110,7 +110,7 @@ const Certificates = () => {
         },
         {
             id: "16",
-            title: "AWS Fundamentals of AIML",
+            title: "Fundamentals of Machine Learning and Artificial Intelligence",
             issuer: "Amazon Web Services",
             category: "AI & Cloud",
             url: "https://drive.google.com/file/d/1c9XmjuuH0X3Yr1UkRR6ReC5z329THXQ3/view?usp=sharing",
