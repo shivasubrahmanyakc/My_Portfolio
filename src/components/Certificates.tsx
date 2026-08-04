@@ -164,6 +164,13 @@ const Certificates = () => {
             category: "Data Science",
             url: "https://drive.google.com/file/d/1Eh20_KiUZlTzy8Jo3DaNHYApbRbho1a1/view?usp=sharing",
         },
+        {
+            id: "24",
+            title: "Postman API Fundamentals Student Expert",
+            issuer: "Postman",
+            category: "API",
+            url: "https://drive.google.com/file/d/1JmpWtNVpIp-9qeRuJwvRai2mLL1IRW1o/view?usp=sharing",
+        },
     ];
 
     return (
