@@ -87,8 +87,7 @@
 }
 
 .research-item:hover {
-    background-color: rgba(59, 130, 246, 0.05);
-    /* matches accent/5 in projects */
+    background-color: var(--color-secondary);
 }
 
 .research-grid {
@@ -183,7 +182,7 @@
     align-self: flex-start;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    background-color: rgba(59, 130, 246, 0.05);
+    background-color: var(--color-secondary);
 }
 
 .research-description {

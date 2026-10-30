@@ -188,12 +188,12 @@ class Particle {
                 ctx.drawImage(this.image, this.x, this.y, this.size, this.size);
             } catch (e) {
                 ctx.font = `600 ${this.size}px 'JetBrains Mono'`;
-                ctx.fillStyle = this.theme === 'dark' ? `rgb(248,250,252)` : `rgb(0,0,0)`;
+                ctx.fillStyle = this.theme === 'dark' ? `rgb(235,235,235)` : `rgb(17,17,17)`;
                 ctx.fillText("?", this.x, this.y);
             }
         } else {
             ctx.font = `600 ${this.size}px 'JetBrains Mono'`;
-            ctx.fillStyle = this.theme === 'dark' ? `rgb(248,250,252)` : `rgb(0,0,0)`;
+            ctx.fillStyle = this.theme === 'dark' ? `rgb(235,235,235)` : `rgb(17,17,17)`;
             ctx.fillText(this.text, this.x, this.y);
         }
 

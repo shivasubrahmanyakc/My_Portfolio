@@ -90,7 +90,7 @@
 }
 
 .achieve-item:hover {
-    background-color: rgba(59, 130, 246, 0.04);
+    background-color: var(--color-secondary);
 }
 
 /* ── Grid inside item ── */
@@ -195,7 +195,7 @@
     padding: 0.2rem 0.45rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    background-color: rgba(59, 130, 246, 0.06);
+    background-color: var(--color-secondary);
 }
 
 .achieve-date-badge {
@@ -257,6 +257,6 @@
     letter-spacing: 0.06em;
     border: 1px solid var(--color-accent);
     padding: 0.3rem 0.6rem;
-    background-color: rgba(59, 130, 246, 0.08);
+    background-color: var(--color-secondary);
     text-transform: uppercase;
 }

@@ -85,7 +85,7 @@
 
 .nav-index {
     margin-right: 0.5rem;
-    color: rgba(59, 130, 246, 0.5);
+    color: var(--color-muted-foreground);
     opacity: 0;
     transition: opacity 0.2s;
 }

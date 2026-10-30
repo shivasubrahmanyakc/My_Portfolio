@@ -60,7 +60,7 @@
     height: 12rem;
     object-fit: cover;
     filter: grayscale(75%);
-    border: 1px solid rgba(15, 23, 42, 0.2);
+    border: 1px solid var(--color-border);
 }
 
 @media (min-width: 480px) {
@@ -127,14 +127,15 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--color-accent);
+    color: var(--color-muted-foreground);
     margin-bottom: 0.5rem;
 }
 
 .status-dot {
     width: 0.5rem;
     height: 0.5rem;
-    background-color: var(--color-accent);
+    background-color: #22c55e;
+    border-radius: 9999px;
 }
 
 .identity-text {
@@ -172,7 +173,7 @@
 .divider {
     height: 1px;
     width: 4rem;
-    background-color: rgba(59, 130, 246, 0.5);
+    background-color: var(--color-border);
 }
 
 @media (min-width: 1024px) {

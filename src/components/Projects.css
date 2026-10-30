@@ -87,8 +87,7 @@
 }
 
 .project-item:hover {
-    background-color: rgba(59, 130, 246, 0.05);
-    /* accent/5 */
+    background-color: var(--color-secondary);
 }
 
 .project-grid {

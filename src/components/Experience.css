@@ -14,7 +14,7 @@
 .experience-bg-gradient {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom right, rgba(59, 130, 246, 0.05), var(--color-background));
+    background: transparent;
     z-index: 1;
 }
 
@@ -81,8 +81,7 @@
 }
 
 .experience-card:hover {
-    border-color: rgba(59, 130, 246, 0.5);
-    /* primary/50 */
+    border-color: var(--color-foreground);
 }
 
 .experience-head-content {
@@ -243,9 +242,8 @@
     border-radius: 9999px;
     font-size: 0.75rem;
     font-weight: 600;
-    background-color: rgba(59, 130, 246, 0.1);
-    /* accent/10 */
-    color: var(--color-accent);
+    background-color: var(--color-muted);
+    color: var(--color-foreground);
     transition: all 0.2s;
 }
 

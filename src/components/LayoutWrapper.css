@@ -23,8 +23,8 @@
 .layout-top-bar-accent {
     height: 100%;
     width: 33.333%;
-    background-color: rgba(59, 130, 246, 0.5);
-    /* Accent color with opacity */
+    background-color: var(--color-foreground);
+    opacity: 0.25;
 }
 
 .layout-main {
