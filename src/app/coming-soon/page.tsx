@@ -1,11 +1,14 @@
-import { useEffect, useState } from "react";
-import { useSearchParams, Link } from "react-router-dom";
+'use client';
+
+import { useEffect, useState, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 import { ArrowLeft, Terminal } from "lucide-react";
 import "./ComingSoon.css";
 
-const ComingSoon = () => {
-  const [searchParams] = useSearchParams();
-  const projectName = searchParams.get("project") || "Requested System Simulation";
+function ComingSoonContent() {
+  const searchParams = useSearchParams();
+  const projectName = searchParams?.get("project") || "Requested System Simulation";
   const [percent, setPercent] = useState(0);
 
   // Dynamic system boot simulation
@@ -108,7 +111,7 @@ const ComingSoon = () => {
 
           {/* Action Button */}
           <div className="cs-terminal-actions">
-            <Link to="/" className="cs-back-btn">
+            <Link href="/" className="cs-back-btn">
               <ArrowLeft size={14} style={{ display: 'inline', marginRight: '4px', verticalAlign: 'middle' }} />
               Return_to_Systems
             </Link>
@@ -117,6 +120,12 @@ const ComingSoon = () => {
       </div>
     </div>
   );
-};
+}
 
-export default ComingSoon;
+export default function ComingSoonPage() {
+  return (
+    <Suspense fallback={<div className="cs-coming-soon-container" style={{ padding: '2rem', fontFamily: 'var(--font-mono)' }}>Loading simulation...</div>}>
+      <ComingSoonContent />
+    </Suspense>
+  );
+}

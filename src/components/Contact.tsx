@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { Github, Linkedin, Mail, Send } from "lucide-react";
 import "./Contact.css";
@@ -15,7 +17,7 @@ const Contact = () => {
     // 1. Rate Limit Check (Client-side)
     const RATE_LIMIT_KEY = 'portfolio_last_contact_time';
     const COOLDOWN_MS = 60000; // 60 seconds
-    const lastSent = localStorage.getItem(RATE_LIMIT_KEY);
+    const lastSent = typeof window !== 'undefined' ? localStorage.getItem(RATE_LIMIT_KEY) : null;
 
     if (lastSent) {
       const timePassed = Date.now() - parseInt(lastSent);
@@ -33,7 +35,9 @@ const Contact = () => {
     }
 
     // 3. Update Email and Timestamp
-    localStorage.setItem(RATE_LIMIT_KEY, Date.now().toString());
+    if (typeof window !== 'undefined') {
+      localStorage.setItem(RATE_LIMIT_KEY, Date.now().toString());
+    }
 
     const subject = `Portfolio Contact from ${name}`;
     const body = `${message}\n\nBest Regards\nContact Details:\nName: ${name}\nEmail: ${email}`;

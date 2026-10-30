@@ -1,4 +1,6 @@
-import { useEffect, useRef } from 'react';
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
 import { useTheme } from './ThemeProvider';
 import './BackgroundEffect.css';
 
@@ -9,7 +11,6 @@ const GITHUB = {
 };
 
 const CFG = {
-    particleCount: window.innerWidth < 768 ? 25 : 60,   // Reduced for mobile
     scrollSpeed: -0.8,
     mouseRadius: 150,
     mouseForce: 0.15,
@@ -51,14 +52,8 @@ const TECH_LOGOS = [
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
 ];
 
-// Preload images
+// Preloaded images array initialized in browser
 const preloadedImages: HTMLImageElement[] = [];
-TECH_LOGOS.forEach(url => {
-    const img = new Image();
-    img.crossOrigin = "Anonymous";
-    img.src = url;
-    preloadedImages.push(img);
-});
 
 const LINUX_LOGS: string[] = [
     "[  0.000000] Linux version 5.15.0-generic",
@@ -143,8 +138,9 @@ class Particle {
 
         // Depth logic
         this.z = Math.random() * 0.8 + 0.2;
-        const baseSize = window.innerWidth < 768 ? 24 : 48;
-        this.size = this.isImage ? baseSize * this.z : (baseSize / 4) * this.z; // Scale for mobile
+        const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+        const baseSize = isMobile ? 24 : 48;
+        this.size = this.isImage ? baseSize * this.z : (baseSize / 4) * this.z;
 
         // Base opacity
         this.opacityBase = (Math.random() * 0.4 + 0.1);
@@ -188,27 +184,22 @@ class Particle {
         ctx.globalAlpha = this.opacity;
 
         if (this.isImage && this.image) {
-            // Draw Image
             try {
                 ctx.drawImage(this.image, this.x, this.y, this.size, this.size);
             } catch (e) {
-                // Fallback if image fails to draw
                 ctx.font = `600 ${this.size}px 'JetBrains Mono'`;
                 ctx.fillStyle = this.theme === 'dark' ? `rgb(248,250,252)` : `rgb(0,0,0)`;
                 ctx.fillText("?", this.x, this.y);
             }
         } else {
-            // Draw Text
             ctx.font = `600 ${this.size}px 'JetBrains Mono'`;
-            // Dynamic text color based on theme
             ctx.fillStyle = this.theme === 'dark' ? `rgb(248,250,252)` : `rgb(0,0,0)`;
             ctx.fillText(this.text, this.x, this.y);
         }
 
-        ctx.globalAlpha = 1.0; // Reset alpha
+        ctx.globalAlpha = 1.0;
     }
 }
-
 
 export const BackgroundEffect = () => {
     const { theme } = useTheme();
@@ -217,8 +208,21 @@ export const BackgroundEffect = () => {
     const particlesRef = useRef<Particle[]>([]);
     const animationFrameRef = useRef<number>(0);
     const mouseRef = useRef({ x: -1000, y: -1000 });
+    const [isTouchDevice, setIsTouchDevice] = useState(true);
 
     useEffect(() => {
+        // Preload tech logo images in browser once
+        if (preloadedImages.length === 0) {
+            TECH_LOGOS.forEach(url => {
+                const img = new Image();
+                img.crossOrigin = "Anonymous";
+                img.src = url;
+                preloadedImages.push(img);
+            });
+        }
+
+        setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
+
         const canvas = canvasRef.current;
         const ctx = canvas?.getContext('2d');
         if (!canvas || !ctx) return;
@@ -232,7 +236,7 @@ export const BackgroundEffect = () => {
             canvas.width = width;
             canvas.height = height;
             particlesRef.current = [];
-            const count = width < 768 ? 25 : CFG.particleCount;
+            const count = width < 768 ? 25 : 60;
             for (let i = 0; i < count; i++) {
                 particlesRef.current.push(new Particle(width, height, theme));
             }
@@ -269,11 +273,9 @@ export const BackgroundEffect = () => {
                     if (cursorLines.length > 0) {
                         CURSOR_SNIPPETS.push(...cursorLines);
                     }
-                    // Re-init partials to include new logs? Or just they will be picked up on reset.
-                    // Existing particles will pick up new logs on reset
                 }
             } catch (e) {
-                console.error("BG Effect: Failed to fetch github", e);
+                // Ignore background fetch error
             }
         };
         fetchGitHub();
@@ -285,7 +287,6 @@ export const BackgroundEffect = () => {
     }, [theme]);
 
     useEffect(() => {
-        // Cursor Logic
         const cursorEl = cursorRef.current;
         if (!cursorEl) return;
 
@@ -323,7 +324,6 @@ export const BackgroundEffect = () => {
         window.addEventListener('mousemove', handleMouseMove);
         window.addEventListener('mouseover', handleMouseOver);
 
-        // Init text
         cursorEl.innerText = "Ready";
 
         return () => {
@@ -333,9 +333,6 @@ export const BackgroundEffect = () => {
         };
     }, []);
 
-    // Detect touch device
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
     return (
         <>
             {!isTouchDevice && <div id="code-cursor" ref={cursorRef} />}
@@ -344,4 +341,3 @@ export const BackgroundEffect = () => {
         </>
     );
 };
-

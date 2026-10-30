@@ -1,4 +1,7 @@
+'use client';
+
 import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 import "./Navigation.css";
@@ -6,6 +9,8 @@ import "./Navigation.css";
 const Navigation = () => {
   const { theme, toggleTheme } = useTheme();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
 
   const navItems = [
     { name: 'Index', href: '#home' },
@@ -19,18 +24,22 @@ const Navigation = () => {
   ];
 
   const scrollToSection = (href: string) => {
+    setIsMobileMenuOpen(false);
+    if (pathname !== '/') {
+      router.push('/' + href);
+      return;
+    }
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsMobileMenuOpen(false);
   };
 
   return (
     <nav className="navigation">
       <div className="navigation-container">
         {/* Logo / ID */}
-        <div className="navigation-logo">
+        <div className="navigation-logo" onClick={() => scrollToSection('#home')} style={{ cursor: 'pointer' }}>
           SK_PORTFOLIO_V2.0
         </div>
 
@@ -61,6 +70,7 @@ const Navigation = () => {
         <button
           className="mobile-menu-btn"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle Navigation Menu"
         >
           {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>

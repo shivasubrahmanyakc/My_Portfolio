@@ -1,5 +1,7 @@
+'use client';
+
 import { Activity, ExternalLink, Shield } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import "./Research.css";
 
 const Research = () => {
@@ -106,7 +108,7 @@ const Research = () => {
                                         </a>
                                     ) : (
                                         <Link
-                                            to={`/coming-soon?project=${encodeURIComponent(item.title)}`}
+                                            href={`/coming-soon?project=${encodeURIComponent(item.title)}`}
                                             className="btn btn-primary research-btn"
                                         >
                                             <ExternalLink size={12} />

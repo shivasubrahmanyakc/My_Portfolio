@@ -1,17 +1,23 @@
+'use client';
+
 import { useState, useEffect } from "react";
 import "./StatusBar.css";
 
 export const StatusBar = () => {
-    const [time, setTime] = useState(new Date());
+    const [timeStr, setTimeStr] = useState<string>("");
     const [scroll, setScroll] = useState(0);
 
     useEffect(() => {
-        const timer = setInterval(() => setTime(new Date()), 1000);
+        const updateTime = () => {
+            setTimeStr(new Date().toLocaleTimeString([], { hour12: false }));
+        };
+        updateTime();
+        const timer = setInterval(updateTime, 1000);
 
         const handleScroll = () => {
             const scrolled = window.scrollY;
             const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-            const percentage = (scrolled / maxScroll) * 100;
+            const percentage = maxScroll > 0 ? (scrolled / maxScroll) * 100 : 0;
             setScroll(Math.min(100, Math.max(0, percentage)));
         };
 
@@ -44,8 +50,8 @@ export const StatusBar = () => {
                     </div>
                     <span className="scroll-percentage">{Math.round(scroll)}%</span>
                 </div>
-                <span className="status-time">
-                    {time.toLocaleTimeString([], { hour12: false })}
+                <span className="status-time" suppressHydrationWarning>
+                    {timeStr || "--:--:--"}
                 </span>
             </div>
         </div>

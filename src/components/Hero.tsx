@@ -1,5 +1,6 @@
+'use client';
+
 import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
-import profilePhoto from "../../images/profile.png";
 import "./Hero.css";
 
 const Hero = () => {
@@ -11,10 +12,10 @@ const Hero = () => {
         <div className="profile-container">
           <div className="profile-image-wrapper">
             <img
-              src={profilePhoto}
+              src="/images/profile.png"
               alt="Shivasubrahmanya K C — AI/ML Engineer"
               className="profile-image"
-              loading="lazy"
+              loading="eager"
               width="400"
               height="400"
             />
@@ -90,6 +91,5 @@ const Hero = () => {
     </section>
   );
 };
-
 
 export default Hero;

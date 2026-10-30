@@ -1,5 +1,7 @@
+'use client';
+
 import { ExternalLink, Github, Clock, Users, Utensils, Mail, Bell, Brain, HeartPulse, Bot, Activity, Network, FlaskConical } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import "./Projects.css";
 
 const Projects = () => {
@@ -158,7 +160,6 @@ const Projects = () => {
         "Leaderboard with DB triggers and procedures",
         "Admin dashboard and verification workflow"
       ],
-
     },
     {
       id: "09",
@@ -204,28 +205,28 @@ const Projects = () => {
       ],
     },
     {
-  id: "11",
-  title: "Code Evolution Intelligence — Temporal GNN for Software Change Prediction",
-  description: "An AI-powered software engineering intelligence platform that models code evolution as temporal AST graphs to predict future code changes and detect buggy code states using Graph Neural Networks and Transformers.",
-  icon: <Network size={20} />,
-  technologies: [
-    "PyTorch",
-    "PyTorch Geometric",
-    "Transformer",
-    "Tree-sitter",
-    "GitPython",
-    "Streamlit",
-    "NetworkX"
-  ],
-  demoUrl: "#",
-  codeUrl: "https://github.com/shivasubrahmanyakc/Code-Evolution-Intelligence",
-  features: [
-    "Transforms Git commit history into Abstract Syntax Tree (AST) graphs and learns structural code evolution patterns",
-    "Hybrid GNN + Transformer architecture for temporal code representation, predicting future code changes and bug likelihood",
-    "Automated end-to-end pipeline covering commit extraction, AST parsing, graph construction, sequence generation, model training, and evaluation",
-    "Interactive Streamlit application providing live repository analysis, change prediction, bug risk estimation, and evolution visualizations"
-  ]
-},
+      id: "11",
+      title: "Code Evolution Intelligence — Temporal GNN for Software Change Prediction",
+      description: "An AI-powered software engineering intelligence platform that models code evolution as temporal AST graphs to predict future code changes and detect buggy code states using Graph Neural Networks and Transformers.",
+      icon: <Network size={20} />,
+      technologies: [
+        "PyTorch",
+        "PyTorch Geometric",
+        "Transformer",
+        "Tree-sitter",
+        "GitPython",
+        "Streamlit",
+        "NetworkX"
+      ],
+      demoUrl: "#",
+      codeUrl: "https://github.com/shivasubrahmanyakc/Code-Evolution-Intelligence",
+      features: [
+        "Transforms Git commit history into Abstract Syntax Tree (AST) graphs and learns structural code evolution patterns",
+        "Hybrid GNN + Transformer architecture for temporal code representation, predicting future code changes and bug likelihood",
+        "Automated end-to-end pipeline covering commit extraction, AST parsing, graph construction, sequence generation, model training, and evaluation",
+        "Interactive Streamlit application providing live repository analysis, change prediction, bug risk estimation, and evolution visualizations"
+      ]
+    },
     {
       id: "12",
       title: "RIDA — Rare Intelligence for Disease Analysis",
@@ -257,30 +258,30 @@ const Projects = () => {
       ],
     },
     {
-  id: "14",
-  title: "ÆSCULAPIUS — Self-Healing Multi-Agent RAG Platform",
-  description: "A production-grade agentic Retrieval-Augmented Generation (RAG) platform that autonomously detects retrieval failures, rewrites queries, verifies generated responses, and self-heals without human intervention using an 8-agent LangGraph workflow.",
-  icon: <Bot size={20} />,
-  technologies: [
-    "LangGraph",
-    "FastAPI",
-    "React",
-    "Pinecone",
-    "LangChain",
-    "Llama 3.1",
-    "Google Gemini",
-    "BAAI/bge-m3",
-    "Tailwind CSS"
-  ],
-  demoUrl: "#",
-  codeUrl: "https://github.com/shivasubrahmanyakc/AESCULAPIUS",
-  features: [
-    "8-agent AI workflow for query analysis, retrieval, reranking, context evaluation, self-healing, generation, hallucination verification, and confidence scoring",
-    "Autonomous self-healing pipeline with up to three intelligent query rewrites when retrieval quality falls below threshold",
-    "Cross-encoder reranking using BAAI bge-reranker-large with Pinecone vector search for highly relevant document retrieval",
-    "Grounded answer generation with hallucination verification, multi-factor confidence scoring, and real-time analytics dashboard"
-  ]
-},
+      id: "14",
+      title: "ÆSCULAPIUS — Self-Healing Multi-Agent RAG Platform",
+      description: "A production-grade agentic Retrieval-Augmented Generation (RAG) platform that autonomously detects retrieval failures, rewrites queries, verifies generated responses, and self-heals without human intervention using an 8-agent LangGraph workflow.",
+      icon: <Bot size={20} />,
+      technologies: [
+        "LangGraph",
+        "FastAPI",
+        "React",
+        "Pinecone",
+        "LangChain",
+        "Llama 3.1",
+        "Google Gemini",
+        "BAAI/bge-m3",
+        "Tailwind CSS"
+      ],
+      demoUrl: "#",
+      codeUrl: "https://github.com/shivasubrahmanyakc/AESCULAPIUS",
+      features: [
+        "8-agent AI workflow for query analysis, retrieval, reranking, context evaluation, self-healing, generation, hallucination verification, and confidence scoring",
+        "Autonomous self-healing pipeline with up to three intelligent query rewrites when retrieval quality falls below threshold",
+        "Cross-encoder reranking using BAAI bge-reranker-large with Pinecone vector search for highly relevant document retrieval",
+        "Grounded answer generation with hallucination verification, multi-factor confidence scoring, and real-time analytics dashboard"
+      ]
+    },
     {
       id: "15",
       title: "RxSignal — Drug Interaction Risk Intelligence Platform",
@@ -360,7 +361,7 @@ const Projects = () => {
                     </a>
                   ) : (
                     <Link
-                      to={`/coming-soon?project=${encodeURIComponent(project.title)}`}
+                      href={`/coming-soon?project=${encodeURIComponent(project.title)}`}
                       className="btn btn-primary project-btn"
                     >
                       <ExternalLink size={12} />
