@@ -43,7 +43,7 @@ export default function NotFound() {
           404: ERROR_NOT_FOUND
         </h1>
         <p style={{ fontSize: "0.875rem", color: "var(--color-muted-foreground)", marginBottom: "1.5rem" }}>
-          // The requested subsystem URL [{pathname}] does not exist in this deployment.
+          {`// The requested subsystem URL [${pathname}] does not exist in this deployment.`}
         </p>
         <Link
           href="/"

@@ -74,7 +74,7 @@ const Skills = () => {
             <h2 className="skills-heading">Technical_Specifications</h2>
           </div>
           <p className="skills-description">
-            // COMPREHENSIVE TOOLKIT FOR DATA TRANSFORMATION AND INTELLIGENT SOLUTIONS
+            {"// COMPREHENSIVE TOOLKIT FOR DATA TRANSFORMATION AND INTELLIGENT SOLUTIONS"}
           </p>
         </div>
 

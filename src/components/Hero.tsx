@@ -1,6 +1,7 @@
 'use client';
 
 import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
+import Image from "next/image";
 import "./Hero.css";
 
 const Hero = () => {
@@ -11,13 +12,13 @@ const Hero = () => {
         {/* Profile Image */}
         <div className="profile-container">
           <div className="profile-image-wrapper">
-            <img
+            <Image
               src="/images/profile.png"
               alt="Shivasubrahmanya K C — AI/ML Engineer"
               className="profile-image"
-              loading="eager"
-              width="400"
-              height="400"
+              priority
+              width={400}
+              height={400}
             />
             {/* Technical Markers */}
             <div className="corner-marker-tl" />

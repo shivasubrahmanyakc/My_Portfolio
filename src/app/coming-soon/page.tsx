@@ -68,7 +68,7 @@ function ComingSoonContent() {
           </div>
           <div className="cs-terminal-line">
             <span className="cs-terminal-label">[SYS_CONFIG]</span>
-            <span className="cs-terminal-value">TARGET_MODULE: "{projectName}"</span>
+            <span className="cs-terminal-value">TARGET_MODULE: &quot;{projectName}&quot;</span>
           </div>
 
           <div style={{ marginTop: '1.5rem' }}>
@@ -91,7 +91,7 @@ function ComingSoonContent() {
 
           <div>
             <span style={{ color: 'var(--color-muted-foreground)', fontSize: '0.8125rem' }}>
-              // NOTICE: THE DEPLOYED SANDBOX ENVIRONMENT IS CURRENTLY BEING CONSTRUCTED
+              {"// NOTICE: THE DEPLOYED SANDBOX ENVIRONMENT IS CURRENTLY BEING CONSTRUCTED"}
             </span>
           </div>
 

@@ -61,9 +61,9 @@ const Contact = () => {
               Ready to collaborate on innovative projects or discuss opportunities in AI & Data Science.
               <br />
               <span className="contact-status">
-                            // STATUS: OPEN_FOR_CONNECT
+                {"// STATUS: OPEN_FOR_CONNECT"}
                 <br />
-                            // RESPONSE_TIME: &lt; 24h
+                {"// RESPONSE_TIME: < 24h"}
               </span>
             </p>
 
