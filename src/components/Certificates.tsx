@@ -171,6 +171,13 @@ const Certificates = () => {
             category: "API",
             url: "https://drive.google.com/file/d/1JmpWtNVpIp-9qeRuJwvRai2mLL1IRW1o/view?usp=sharing",
         },
+        {
+            id: "25",
+            title: "Deep Learning — NPTEL Elite Silver",
+            issuer: "NPTEL (IIT Ropar)",
+            category: "Deep Learning",
+            url: "https://drive.google.com/file/d/1TYjTTguneDlvrtOpKxh5b5WkkLrY1h9s/view?usp=drive_link",
+        },
     ];
 
     return (
